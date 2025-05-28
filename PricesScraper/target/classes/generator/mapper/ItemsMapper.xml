@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.pricesscraper.mapper.ItemsMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.pricesscraper.domain.Items">
+            <id property="id" column="id" />
+            <result property="productName" column="product_name" />
+            <result property="abrasion" column="abrasion" />
+            <result property="price" column="price" />
+            <result property="seekPrice" column="seek_price" />
+            <result property="onSale" column="on_sale" />
+            <result property="onSeek" column="on_seek" />
+            <result property="createdAt" column="created_at" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,product_name,abrasion,price,seek_price,on_sale,
+        on_seek,created_at
+    </sql>
+</mapper>

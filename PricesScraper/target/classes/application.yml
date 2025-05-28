@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: PricesScraper
+  profiles:
+    active: dev
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # mysql 数据库配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/PricesScraper
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+#knife4j API文档配置
+knife4j:
+  enable: true
+  setting:
+    language: zh_cn
+  openapi:
+    title: "Prices Scraper API Documents"
+    group:
+      default:
+        api-rule: package
+        api-rule-resources:
+          - com.example.pricesscraper.controller
